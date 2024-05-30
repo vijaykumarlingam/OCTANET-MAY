@@ -1,0 +1,201 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+/* font-family: 'Libre Baskerville', serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+}
+
+body
+{
+    background-color: #000;
+} 
+
+.nav-bar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    height: 80px;
+    z-index: 5;   
+}
+.nav-bar img
+{
+    width: 140px;
+    margin-left: 50px;
+}
+.nav-list 
+{
+    display: flex;
+    width: 100%;
+    margin-left: 180px;
+}
+.nav-list ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    margin-left: 77px;
+}
+.nav-list ul li a
+{
+   margin-left: 80px;
+   text-decoration: none;
+   color: #ffffff;
+   font-weight: 600;
+   font-size: 18px;
+   position: relative;
+   
+}
+.nav-list ul li a::after
+{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #dd0707;
+    transition: 0.4s;
+}
+.nav-list ul li a:hover::after
+{
+    width: 100%;
+    
+}
+
+.social
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.social i
+{
+    color: #ffffff;
+    margin-left: 16px;
+    font-size: 23px;
+}
+#fac:hover
+{
+    color: blue;
+}
+#insta:hover
+{
+    color: rgba(220, 9, 199, 0.8);
+}
+#twit:hover
+{
+    color: rgb(19, 112, 232);
+}
+.container .text
+{
+    width: 90%;
+    margin: auto;
+    transform: translate(10px ,200px);
+    z-index: 5;
+    position: relative;
+
+}
+.text h4
+{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+   
+}
+.text h1
+{
+    color: #fff;
+    font-size: 65px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.container .text h1 span{
+    color: #dd0707;
+    font-size: 80px;
+    font-weight: bold;
+}
+.container .text p{
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+
+   
+}
+.btn a{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #dd0707;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #dd0707;
+    transition: 0.2s;
+    z-index: 2;
+    text-decoration: none;
+    position: fixed;
+
+    
+}
+.btn a:hover
+{
+    background-color:transparent;
+    color: #dd0707;
+    border-color: transparent;
+    
+}
+.btn a:hover ~ .bg-1
+{
+    opacity: 0;
+    z-index: 0;
+} 
+.btn a:hover ~ .bg-2
+{
+    opacity: 1;
+    z-index: 1;
+}
+
+.bg-1, .bg-2
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 1; */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: cover; */
+    transition: opacity 1s;
+
+}
+.bg-1
+{
+    background-image: url("landing-images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 1;
+}
+.bg-2
+{
+    background-image: url("landing-images/bg-light.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+}
